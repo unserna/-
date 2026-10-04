@@ -1,0 +1,47 @@
+# ===== 虚拟环境 =====
+.venv/
+venv/
+env/
+.jupyter/
+.ipython/
+
+# ===== Python 缓存 =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ===== pip 临时目录 =====
+pip-build-tracker-*
+pip-ephem-wheel-cache-*
+pip-install-*
+pip-metadata-*
+pip-unpack-*
+tmp*_kernels/
+
+# ===== 编辑器 / 系统 =====
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ===== 数据（体积大 + 可能涉密，绝不入库）=====
+data/raw/*
+data/interim/*
+data/processed/*
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+
+# ===== 结果产物 =====
+results/models/*
+results/figures/*
+!results/models/.gitkeep
+!results/figures/.gitkeep
+
+# ===== 敏感信息 =====
+.env
+*.key
+*.pem
+secrets.*

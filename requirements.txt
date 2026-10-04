@@ -1,0 +1,31 @@
+# ============================================================
+#  engine-phm-study 运行环境依赖
+#
+#  【推荐】直接跑一键脚本：powershell -ExecutionPolicy Bypass -File scripts\setup_env.ps1
+#
+#  【必须】Python 3.11 或 3.12。PyTorch 不支持系统默认的 3.14。
+#
+#  【踩过的坑】不要一次性 pip install -r requirements.txt！
+#   实测会触发 pip 依赖解析回溯，下载 pyspark(430MB) 等无关大包，
+#   1.5GB 下完仍装不上。请用 setup_env.ps1 的分批次方式。
+# ============================================================
+
+numpy>=1.26
+pandas>=2.1
+scipy>=1.11
+matplotlib>=3.8
+seaborn>=0.13
+scikit-learn>=1.4
+xgboost>=2.0
+PyWavelets>=1.5
+jupyter>=1.0
+ipykernel>=6.29
+openpyxl>=3.1
+tqdm>=4.66
+
+# 单独安装（体积大）：
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+# 软件层（毕设阶段）：
+# streamlit>=1.35
+# fastapi>=0.111
+# uvicorn>=0.30
